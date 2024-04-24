@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Fungsi untuk menghitung nilai rata-rata
+double hitung_rata_rata(double nilai_tugas1, double nilai_tugas2, double nilai_tugas3) {
+    return (nilai_tugas1 + nilai_tugas2 + nilai_tugas3) / 3;
+}
+
+int main() {
+    // Deklarasi variabel
+    string nim_siswa, nama_siswa;
+    double nilai_tugas1, nilai_tugas2, nilai_tugas3;
+
+    // Input data siswa
+    cout << "Masukkan NIM siswa: ";
+    getline(cin, nim_siswa);
+    cout << "Masukkan Nama siswa: ";
+    getline(cin, nama_siswa);
+    cout << "Masukkan Nilai Tugas 1: ";
+    cin >> nilai_tugas1;
+    cout << "Masukkan Nilai Tugas 2: ";
+    cin >> nilai_tugas2;
+    cout << "Masukkan Nilai Tugas 3: ";
+    cin >> nilai_tugas3;
+
+    // Hitung nilai rata-rata
+    double rata_rata = hitung_rata_rata(nilai_tugas1, nilai_tugas2, nilai_tugas3);
+
+    // Output hasil
+	cout << "\nNim " << nim_siswa << " Siswa yang bernama " << nama_siswa << endl;
+    cout << "Memperoleh nilai rata-rata " << rata_rata << " dari hasil tugas yang diikutinya." << endl;
+
+
+    return 0;
+}
