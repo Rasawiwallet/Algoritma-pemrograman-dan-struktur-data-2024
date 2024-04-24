@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Fungsi untuk menghitung nilai akhir
+double hitung_nilai_akhir(double nilai_keaktifan, double nilai_tugas, double nilai_ujian) {
+    double nilai_murni_keaktifan = nilai_keaktifan * 0.20;
+    double nilai_murni_tugas = nilai_tugas * 0.50;
+    double nilai_murni_ujian = nilai_ujian * 0.30;
+
+    double nilai_akhir = nilai_murni_keaktifan + nilai_murni_tugas + nilai_murni_ujian;
+    return nilai_akhir;
+}
+
+int main() {
+    // Deklarasi variabel
+    string nama_siswa;
+    double nilai_keaktifan, nilai_tugas, nilai_ujian;
+
+    // Input data siswa
+    cout << "PROGRAM HITUNG NILAI AKHIR" << endl;
+    cout << "Nama Siswa: ";
+    getline(cin, nama_siswa);
+    cout << "Nilai Keaktifan: ";
+    cin >> nilai_keaktifan;
+    cout << "Nilai Tugas: ";
+    cin >> nilai_tugas;
+    cout << "Nilai Ujian: ";
+    cin >> nilai_ujian;
+
+    // Hitung nilai murni
+    double nilai_murni_keaktifan = nilai_keaktifan * 0.20;
+    double nilai_murni_tugas = nilai_tugas * 0.50;
+    double nilai_murni_ujian = nilai_ujian * 0.30;
+
+    // Hitung nilai akhir
+    double nilai_akhir = hitung_nilai_akhir(nilai_keaktifan, nilai_tugas, nilai_ujian);
+
+    // Output hasil
+    cout << "\nSiswa yang bernama " << nama_siswa << endl;
+    cout << "Dengan Nilai Persentasi Yang dihasilkan." << endl;
+    cout << "Nilai Keaktifan * 20%: " << nilai_murni_keaktifan << endl;
+    cout << "Nilai Tugas * 50%: " << nilai_murni_tugas << endl;
+    cout << "Nilai Ujian * 30%: " << nilai_murni_ujian << endl;
+    cout << "Jadi Siswa yang bernama " << nama_siswa << " memperoleh nilai akhir sebesar " << nilai_akhir << endl;
+
+    return 0;
+}
